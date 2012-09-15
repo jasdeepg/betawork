@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+<title>Solar panel dashboard</title>
+<body>
+{% if name=='test' %}
+    <div class=container>
+        <div class=header>
+            98lumens
+        </div>
+        <div class=navigation>
+            {# include time here #}
+        </div>
+        <br>
+        <div class=body>
+            <div class=panels>
+                {% for panelItem in panelsOwned %}
+                    Panel {{ panelItem.panelNumber }} /
+                {% endfor %}
+            </div>
+            <table class="center">
+                <tr>
+                    <td width=50%>Production</td>
+                    <td width=50%>{{power}} watts</td>
+                </tr>
+                <tr>
+                    <td width=50%>Sells at</td>
+                    <td width=50%> {{sellAt}} cents</td>
+                </tr>
+                <tr>
+                    <td width=50%>Carbon captured</td>
+                    <td width=50%>{{tonsCoal}} tons</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <img class="displayed" src={{ chart }} />
+        </div>
+        <div class=footer>
+            <p>
+                Copyright 2012 by 98lumens.
+            </p>
+            <p>
+                Code is at <a href="https://github.com/jasdeepg/98lumens">Github</a>
+            </p>
+        </div>
+    </div>
+{% else %}
+  <h1>Hello World!</h1>
+{% endif %}
+</body>
+</html>

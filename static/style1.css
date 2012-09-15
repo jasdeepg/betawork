@@ -1,0 +1,17 @@
+/* general style */
+body  {margin: 0; padding: 0}
+
+/* div style */
+div.container    {width: 720px; margin: 50px auto}
+div.header  {float: left}
+div.navigation  {float: right}
+div.body    {width: 500px; clear: both; margin: 0px auto}
+div.item    {text-align: center; width: inherit; height: 50px; margin:0 px auto;
+                border: 1px dotted}
+div.footer  {text-align: center; border-top:1px solid; margin: 10px auto}
+div.panels  {float: left}
+
+
+/* misc style */
+table.center    {text-align: center; width: inherit; margin-left: auto; margin-right: auto}
+img.displayed  {display: block; margin-left: auto; margin-right: auto}

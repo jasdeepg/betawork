@@ -1,0 +1,26 @@
+{% extends "content.html" %}
+{% block body %}
+    <head>
+    </head>
+    <table class=center>
+        <tr>
+            <td width=50%>Production</td>
+            <td width=50%>{{entries[0].power}} W</td>
+        </tr>
+        <tr>
+            <td>Money made</td>
+            <td>
+                {% if money>1 %}
+                    {{ money }} dollars
+                {% else %}
+                    {{ money }} cents
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td>Carbon captured</td>
+            <td>{{ carbonCap }} kg coal</td>
+        </tr>
+    </table>
+    <img class=displayed src={{chart}}>
+{% endblock %}
